@@ -1,0 +1,46 @@
+.head{
+	height:110px;
+	border:5px solid #ccc;
+	position: relative;
+}
+
+#web_name{
+
+	height:80px;
+	width:410px;
+	border:2px solid #bbb;
+	position: absolute;
+	top: 10px;
+	left: 20px;
+}
+
+#logo{
+	margin: auto 0;
+	width:45px;
+	height: 45px;
+	border:1px solid #999;
+	background: url("./images/web_logo.png");
+	background-size: 45px 45px;
+	position: absolute;
+	top: 20px;
+}
+
+#name h3{
+	font-size: 60px;
+	position: absolute;
+	left: 50px;
+
+}
+#description{
+	height: 25px;
+	width: 410px;
+	border: 2px solid #bbb;
+	position: absolute;
+	right: 10px;
+	top:30px;
+}
+
+#description p{
+	font-size: 20px;
+	text-align: center;
+}

@@ -1,0 +1,26 @@
+h2{
+	font-size: 40px;
+	color: #388E3C;
+}
+ul{
+	list-style-type: none;
+	overflow: hidden;
+	width:200px;
+	background-color: #BDBDBD; 
+	margin-top: 30px;
+}
+
+li a{
+	display: block;
+	color: #212121;
+	padding: 8px 0 8px 16px;
+	text-decoration: none;
+	font-size: 20px;
+	font-family: 'Microsoft Yahei','SimHei', sans-serif;
+}
+
+
+li a:hover{
+	background-color: orange;
+	color: #388E3C;
+}
