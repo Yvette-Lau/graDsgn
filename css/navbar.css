@@ -20,12 +20,9 @@
   width: auto;
 }
 
-.navbar-header{
-	position: absolute;
-}
-#btnEnroll{
+
+#navbar{
 	position: relative;
 	float: right;
-	left: 750px;
 	top: 8px;
 }
