@@ -26,3 +26,19 @@
 	float: right;
 	top: 8px;
 }
+
+ul li .btn-info{
+	margin-right: 9px;
+	margin-bottom: 5px;
+}
+
+ul li .btn-success{
+	margin-bottom: 5px;
+	margin-right: -8px;
+}
+
+ul li .btn-warning{
+	margin-left: 16px; 
+	margin-bottom: 5px;
+}
+
