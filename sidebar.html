@@ -3,22 +3,56 @@
 <head>
 	<meta charset="UTF-8">
 	<title>sidebar</title>
-	<link rel="stylesheet" href="F:\Bootstrap\bootstrap-3.3.7-dist\bootstrap-3.3.7-dist\css\bootstrap.min.css"/>
-	<script src="F:\Bootstrap\bootstrap-3.3.7-dist\bootstrap-3.3.7-dist\js\jquery.min.js"></script>
-	<script src="F:\Bootstrap\bootstrap-3.3.7-dist\bootstrap-3.3.7-dist\js\bootstrap.min.js"></script>
-	<link rel="stylesheet" type="text/css" href=".\sidebar.css"/>
+	<link rel="stylesheet" href="./css/bootstrap.min.css"/>
+	<script src="./js/jquery.min.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="./js/sidebar.js"></script>
+	<link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
+
+	
 </head>
 <body>
 	<div class="container-fluid">
 		<div id="content" class="row-fluid">
-			<nav class="col-md-3" id="sidebar">
+			<div class="col-md-3" id="sidebar">
 				<h2>Sidebar</h2>
-				<ul class="nav nav-tabs nav-stacked">
-					<li><a href="#">Another Link1</a></li>
-					<li><a href="#">Another Link2</a></li>
-					<li><a href="#">Another Link3</a></li>
+				<ul class="nav nav-tabs nav-stacked sidebarlist">
+					<li><a href="#"><i></i></a></li>
+					<li><a href="#" data-target-id="widgets"><i class="fa fa-home fa-fw"></i>Home</a></li>
+					<li><a href="#" data-target-id="pages"><i class="fa fa-list-alt fa-fw"></i>Widgets</a></li>
+					<li><a href="#" data-target-id="charts"><i class="fa fa-file-o fa-fw"></i>Pages</a></li>
+					<li><a href="#" data-target-id="table"><i class="fa fa-bar-chart-o fa-fw"></i>Charts</a></li>
+					<li><a href="#" data-target-id="forms"><i class="fa fa-table fa-fw"></i>Tables</a></li>
+					<li><a href="#" data-target-id="calender"><i class="fa fa-tasks fa-fw"></i>Forms</a></li>
+					<li><a href="#" data-target-id="library"><i class="fa fa-calendar fa-fw"></i>Calender</a></li>
+					<li><a href="#" data-target-id="applications"><i class="fa fa-book fa-fw"></i>Applications</a></li>
+					<li><a href="#" data-target-id="settings"><i class="fa fa-cogs fa-fw"></i>Settings</a></li>
 				</ul>
-			</nav>
+			</div>
+			<div class="col-md-9 content" id="home">
+				Home
+			</div>
+			<div class="col-md-9" id="widgets">
+				Widgets
+			</div>
+			<div class="col-md-9" id="pages">
+				Pages
+			</div>
+			<div class="col-md-9" id="charts">
+				Charts
+			</div>
+			<div class="col-md-9" id="table">
+				Tables
+			</div>
+			<div class="col-md-9" id="forms">
+				Forms
+			</div>
+			<div class="col-md-9" id="calender">
+				Calender
+			</div>
+			<div class="col-md-9" id="library">
+				Library
+			</div>
 		</div>
 	</div>
 </body>
