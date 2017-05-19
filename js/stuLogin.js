@@ -70,7 +70,9 @@ $(document).ready(function () {
         el: '#stu-login',
         data: {
             userName: '',
-            password: ''
+            nickname:'',
+            password: '',
+            eMail: ''
         },
         methods: {
             login: function () {
@@ -99,6 +101,40 @@ $(document).ready(function () {
                     }
                     console.error(error)
                 })
+            },
+            register: function () {
+
+                axios.post("http://localhost:7082/user/v1/create", {
+                    userName: this.userName,
+                    nickname: this.nickname,
+                    password: this.password,
+                    email: this.eMail,
+                    role: 'STUDENT'
+                }).then(function(response){
+                    alert("注册成功。")
+                    this.login()
+                }).catch(function(error){
+                    if(error.response){
+                        var code = error.response.data
+                        // 4011  邮箱
+                        if(code == 4011) {
+                            alert('邮箱已被使用，请修改后重试.')
+                        } else if (code == 4012) {
+                            alert('用户名已存在.')
+                        } else if (code == 4004) {
+                            alert("参数错误")
+                        }
+                    }
+                }
+                )
+                /*
+                 {
+                 "userName":"cyrilney",
+                 "email":"cyrilnee2513@gmail.com",
+                 "password":"000000",
+                 "role":"STUDENT"
+                 }
+                 */
             }
         }
     })

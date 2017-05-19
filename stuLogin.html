@@ -45,24 +45,24 @@
 								<form action="#" id="register-form" method="post" role="form" style="display:none;">
 									<h2>REGISTER</h2>
 									<div class="form-group">
-										<input type="text" id="username" name="username" tabindex="1" class="form-control" placeholder="Username" value="" >
+										<input v-model="userName" type="text" id="username" name="username" tabindex="1" class="form-control" placeholder="Username" value="" >
 									</div>
 									<div class="form-group">
-										<input type="text" id="nickname" name="nickname" tabindex="1" class="form-control" placeholder="nickname" value="">
+										<input v-model="nickname" type="text" id="nickname" name="nickname" tabindex="1" class="form-control" placeholder="nickname" value="">
 									</div>
 									<div class="form-group">
-										<input type="email" id="email" name="email" tabindex="1" class="form-control" placeholder="Email Adreess" value="" required>
+										<input v-model='eMail' type="email" id="email" name="email" tabindex="1" class="form-control" placeholder="Email Adreess" value="" required>
 									</div>
 									<div class="form-group">
-										<input type="password" id="password" name="password" tabindex="2" class="form-control" placeholder="Password">
+										<input v-model="password" type="password" id="password" name="password" tabindex="2" class="form-control" placeholder="Password">
 									</div>
 									<div class="form-group">
-										<input type="password" id="confirm_password" name="confirm_password" tabindex="2" class="form-control" placeholder="Confirm Password">
+										<input  type="password" id="confirm_password" name="confirm_password" tabindex="2" class="form-control" placeholder="Confirm Password">
 									</div>
 									<div class="form-group">
 										<div class="row">
 											<div class="col-sm-6 col-sm-offset-3">
-												<input type="submit" id="register-submit" name="register-submit" tabindex="4" class="form-control btn btn-register" value="Register Now">
+												<input @click="register" type="button" id="register-submit" name="register-submit" tabindex="4" class="form-control btn btn-register" value="Register Now">
 											</div>
 										</div>
 									</div>

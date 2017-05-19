@@ -70,7 +70,9 @@ $(document).ready(function () {
         el: '#tec-login',
         data: {
             userName: '',
-            password: ''
+            password: '',
+            nickname: '',
+            eMail: ''
         },
         methods: {
             login: function () {
@@ -86,7 +88,7 @@ $(document).ready(function () {
                     document.cookie = 'jtoken-teacher=' + response.data.content + ';path=/'
                     window.location.href = 'http://localhost:8080'
                 }).catch(function (error) {
-                    if (error.response){
+                    if (error.response) {
                         if (error.response.data.code == 4005 || error.response.data.code == 4007) {
                             alert("用户名密码不合法。 请确认后重试")
                         }
@@ -96,8 +98,32 @@ $(document).ready(function () {
                     console.error(error)
                 })
 
+            },
+            register: function () {
+                axios.post("http://localhost:7082/user/v1/create", {
+                    userName: this.userName,
+                    nickname: this.nickname,
+                    password: this.password,
+                    email: this.eMail,
+                    role: 'TEACHER'
+                }).then(function (response) {
+                    alert("注册成功。")
+                    this.login()
+                }).catch(function (error) {
+                    if (error.response) {
+                        var code = error.response.data
+                        // 4011  邮箱
+                        if (code == 4011) {
+                            alert('邮箱已被使用，请修改后重试.')
+                        } else if (code == 4012) {
+                            alert('用户名已存在.')
+                        } else if (code == 4004) {
+                            alert("参数错误")
+                        }
+                    }
+                })
             }
-        }
 
-    });
+        }
+    })
 })
