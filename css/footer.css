@@ -1,3 +1,6 @@
+footer{
+	padding-top: 20px;
+}
 footer #contact, footer address{
 	display: block;
 	text-align: center;
