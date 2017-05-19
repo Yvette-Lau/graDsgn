@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="UTF-8">
+	<title>教师登录入口</title>
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+	<script src="./js/jquery.min.js"></script>
+	<script src="./js/vue.js"></script>
+	<script src="./js/axios.min.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+	<script src="./js/tecLogin.js"></script>
+	<script src="./js/jquery.js"></script>
+	<script src="./js/jquery.validate.min.js"></script>
+	<script src="./js/base64.js"></script>
+	<script src="./js/md5.js"></script>
+	<link rel="stylesheet" href="./css/font-awesome.min.css">
+	<link rel="stylesheet" href="./css/tecLogin.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<div class="panel panel-login">
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-lg-12" id="tec-login">
+								<form id="login-form" action="#" method="post" role="form" style="display:block;">
+									<h2>LOGIN</h2>
+									<div class="form-group">
+										<input type="text" v-model="userName" id="username" name="username" tabindex="1" class="form-control" placeholder="Username" value="">
+									</div>
+									<div class="form-group">
+										<input type="password" v-model="password" id="password" name="password" tabindex="2" class="form-control" placeholder="Password">
+									</div>
+									<div class="col-xs-6 form-group pull-left checkbox">
+										<input type="checkbox" id="checkbox1" name="remember">
+										<label for="checkbox1">Remember Me</label>
+									</div>
+									<div class="col-xs form-group pull-right">
+										<input @click="login" type="button" id="login-submit" name="login-submint" tabindex="4" class="form-control btn btn-login" value="LOGIN">
+									</div>
+								</form>
+								<form action="#" id="register-form" method="post" role="form" style="display:none;">
+									<h2>REGISTER</h2>
+									<div class="form-group">
+										<input type="text" id="username" name="username" tabindex="1" class="form-control" placeholder="Username" value="">
+									</div>
+									<div class="form-group">
+										<input type="email" id="email" name="email" tabindex="1" class="form-control" placeholder="Email Adreess" value="">
+									</div>
+									<div class="form-group">
+										<input type="password" id="passwordReg" name="passwordReg" tabindex="2" class="form-control" placeholder="Password">
+									</div>
+									<div class="form-group">
+										<input type="password" id="confirm_password" name="confirm_password" tabindex="2" class="form-control" placeholder="Confirm Password">
+									</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-sm-6 col-sm-offset-3">
+												<input type="submit" id="register-submit" name="register-submit" tabindex="4" class="form-control btn btn-register" value="Register Now">
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div class="panel-heading">
+						<div class="row">
+							<div class="col-xs-6 tabs">
+								<a href="#" class="active" id="login-form-link"><div class="login">LOGIN</div></a>
+							</div>
+							<div class="col-xs-6 tabs">
+              					<a href="#" id="register-form-link"><div class="register">REGISTER</div></a>
+           					 </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
