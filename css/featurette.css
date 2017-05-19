@@ -1,17 +1,33 @@
-
-.featurette-divider {
-  margin: 80px 0; /* Space out the Bootstrap <hr> more */
+/* Thin out the marketing headings */
+.featurette-divider{
+	margin: 0px;
 }
 
-/* Thin out the marketing headings */
+#featurette1{
+	padding-top: 60px;
+	padding-bottom: 20px;
+	background-color: #EEFFEE;
+}
+
+#featurette2{
+	background-color: #FAFAD2;
+	padding-top: 10px;
+	padding-bottom: 20px;
+}
+
+#featurette3{
+	background-color: #F5FFFA;
+	padding-top: 10px;
+	padding-bottom: 20px;
+}
+
 .featurette-heading {
   font-weight: 300;
   line-height: 1;
   letter-spacing: -1px;
 }
 
-
-.row{
-	margin-left: 65px;
-	margin-right: 65px;
+.lead{
+	padding-left: 10px;
+	padding-right: 10px;
 }

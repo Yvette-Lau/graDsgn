@@ -1,12 +1,30 @@
+.marketing{
+	padding-top: 60px;
+	padding-bottom: 30px;
+	margin: auto 40px;
+}
+
 .marketing .col-lg-4 {
-  margin-bottom: 20px;
-  text-align: center;
+	
+	text-align: center;
 }
 .marketing h2 {
-  font-weight: normal;
-  color: rgb(204,219,56);
+	font-weight: normal;
+	color: rgb(204,219,56);
 }
 .marketing .col-lg-4 p {
-  margin-right: 10px;
-  margin-left: 10px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.tecDes{
+	margin-top: 5px;
+	margin-bottom: 15px;
+	margin-right: 0px;
+	margin-left: 0px;
+	width: 300px;
+	height: 160px;
+	overflow: hidden;
+	font-weight: 700;
+	background-color: #FFEFD5;
 }

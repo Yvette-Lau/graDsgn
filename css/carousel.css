@@ -10,7 +10,7 @@ html,body{
 .carousel {
   height: 100%;
   overflow: hidden;
-  margin-bottom: 60px;
+  padding-bottom: 60px;
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
