@@ -77,8 +77,6 @@ $(document).ready(function () {
                 var passwordMD5 = hex_md5(this.password);
                 var b = new Base64();
                 var basicCode = "Basic " + b.encode(this.userName + ':' + passwordMD5);
-                alert(basicCode);
-
                 axios.get('http://localhost:7081/token/v1/create/teacher', {
                     headers: {
                         'Authorization': basicCode,
